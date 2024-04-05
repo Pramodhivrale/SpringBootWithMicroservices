@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Spring-SecurityJdbcAuthntication
+  datasource:
+    driver-class-name: ''

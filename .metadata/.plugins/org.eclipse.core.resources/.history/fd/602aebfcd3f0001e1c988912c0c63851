@@ -1,0 +1,13 @@
+package com.repo;
+
+import java.io.Serializable;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.entity.EntityClass;
+
+public interface Repository extends JpaRepository<EntityClass, Serializable>
+{
+	
+
+}

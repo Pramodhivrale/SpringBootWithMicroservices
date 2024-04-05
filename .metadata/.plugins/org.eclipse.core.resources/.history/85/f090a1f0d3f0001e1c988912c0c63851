@@ -1,0 +1,18 @@
+package com.data;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@SpringBootApplication
+@ComponentScan(basePackages = {"com.data","com.entity","com.repo","com.config","controller"})
+
+@EnableJpaRepositories("com.repo")
+public class SpringBatchApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBatchApplication.class, args);
+	}
+
+}
