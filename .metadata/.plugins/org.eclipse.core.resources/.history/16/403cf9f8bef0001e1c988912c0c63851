@@ -1,7 +1,0 @@
-package com.repo;
-
-@org.springframework.stereotype.Repository
-public class Repository extends jparepository{
-	
-
-}
