@@ -42,6 +42,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Spring Boot Ashok Sir\27 SBMS Notes &amp; Workspace Examples Ashok IT\workspace"/>
 			<item value="C:\Spring Boot Ashok Sir\27 SBMS Notes &amp; Workspace Examples Ashok IT\workspace\15_WebMVC_App2"/>
 			<item value="C:\Spring Boot Ashok Sir\27 SBMS Notes &amp; Workspace Examples Ashok IT\workspace\14_WebMVC_App1"/>
 			<item value="C:\Spring Boot Ashok Sir\27 SBMS Notes &amp; Workspace Examples Ashok IT\workspace\47_Spring_Batch_App"/>
