@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <!-- Bootstrap CSS -->
+    <link th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        /* Custom CSS for enhanced design */
+        .container {
+            margin-top: 50px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <h2 class="text-center mb-4">Search Plans</h2>
+        <form th:action="@{/search}" method="get" th:object="${searchForm}">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="planName">Plan Name</label>
+                        <select class="form-control" th:field="*{planName}">
+                            <option value="">Select Plan Name</option>
+                            <option th:each="planName : ${planNames}" th:value="${planName}" th:text="${planName}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="planStatus">Plan Status</label>
+                        <select class="form-control" th:field="*{planStatus}">
+                            <option value="">Select Plan Status</option>
+                            <option th:each="planStatus : ${planStatuses}" th:value="${planStatus}" th:text="${planStatus}"></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" th:field="*{gender}">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="planStartDate">Plan Start Date</label>
+                        <input type="date" class="form-control" th:field="*{planStartDate}" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="planEndDate">Plan End Date</label>
+                        <input type="date" class="form-control" th:field="*{planEndDate}" />
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <!-- Center the Search button -->
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <table class="table" th:if="${citizens}">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Plan Name</th>
+            <th>Plan Status</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Benefit Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+         <tr th:if="${citizens == null or citizens.isEmpty()}">
+            <td colspan="8">No records available</td>
+        </tr>
+        <tr th:each="citizen : ${citizens}">
+            <td th:text="${citizen.citizenId}"></td>
+            <td th:text="${citizen.citizenName}"></td>
+            <td th:text="${citizen.gender}"></td>
+            <td th:text="${citizen.planName}"></td>
+            <td th:text="${citizen.planStatus}"></td>
+            <td th:text="${citizen.planStartDate}"></td>
+            <td th:text="${citizen.planEndDate}"></td>
+            <td th:text="${citizen.benefitAmt}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+    <a href="pdf" class="btn btn-primary" onclick="exportToPDF()">Export to PDF</a>
+    <a href="excel" class="btn btn-primary" onclick="exportToExcel()">Export to Excel</a>
+    </div>
+</div>
+<!-- Bootstrap JS (Optional) - You can remove if not needed -->
+<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+</body>
+</html>

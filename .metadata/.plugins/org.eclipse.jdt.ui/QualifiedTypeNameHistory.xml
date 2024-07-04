@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.service.ServiceClass"/>
-    <fullyQualifiedTypeName name="com.user.User"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="org.springframework.data.redis.core.RedisTemplate"/>
-    <fullyQualifiedTypeName name="com.user.RedisConfig"/>
-    <fullyQualifiedTypeName name="java.io.ObjectInputFilter.Config"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
@@ -27,7 +18,6 @@
     <fullyQualifiedTypeName name="org.springframework.batch.item.data.RepositoryItemWriter"/>
     <fullyQualifiedTypeName name="org.springframework.batch.core.configuration.annotation.StepBuilderFactory"/>
     <fullyQualifiedTypeName name="org.springframework.batch.core.configuration.annotation.JobBuilderFactory"/>
-    <fullyQualifiedTypeName name="com.entity.EntityClass"/>
     <fullyQualifiedTypeName name="org.springframework.batch.core.Job"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.batch.core.launch.JobLauncher"/>
@@ -38,7 +28,6 @@
     <fullyQualifiedTypeName name="org.springframework.batch.core.JobParameters"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaRepositories"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
@@ -59,5 +48,16 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.service.ServiceClass"/>
+    <fullyQualifiedTypeName name="com.req.SearchReqData"/>
+    <fullyQualifiedTypeName name="com.entity.EntityClass"/>
+    <fullyQualifiedTypeName name="com.repo.RepositoryInterface"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Primary"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaRepositories"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.domain.EntityScan"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="com.data.Animal"/>
+    <fullyQualifiedTypeName name="com.data.AnimalFactory"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>
